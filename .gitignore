@@ -1,4 +1,5 @@
 __pycache__/
+**/.DS_Store
 .idea/
 my_database.db
 # Byte-compiled / optimized / DLL files
