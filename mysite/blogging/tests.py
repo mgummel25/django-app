@@ -1,7 +1,16 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
 
-from .models import Post
+from .models import Post, Category
+
+
+class CategoryTestCase(TestCase):
+
+    def test_string_representation(self):
+        expected = "A Category"
+        c1 = Category(name=expected)
+        actual = str(c1)
+        self.assertEqual(expected, actual)
 
 
 class PostTestCase(TestCase):
