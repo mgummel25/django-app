@@ -16,6 +16,7 @@ class PostAdmin(admin.ModelAdmin):
         CategoryInLine,
     ]
 
+
 # Register your models here.
 admin.site.register(Post, PostAdmin)
 admin.site.register(Category, CategoryAdmin)
