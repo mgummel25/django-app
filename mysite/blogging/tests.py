@@ -7,7 +7,6 @@ from django.utils.timezone import utc
 from .models import Post, Category
 
 
-
 class CategoryTestCase(TestCase):
 
     def test_string_representation(self):
@@ -23,9 +22,8 @@ class PostTestCase(TestCase):
     def setUp(self):
         self.user = User.objects.get(pk=1)
 
-
     def test_string_repr(self):
-        expected= "This is a title"
+        expected = "This is a title"
         p1 = Post(title=expected)
         actual = str(p1)
         self.assertEqual(expected, actual)
