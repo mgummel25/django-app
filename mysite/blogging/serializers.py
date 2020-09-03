@@ -1,6 +1,7 @@
+from django.contrib.auth.models import User, Group
+
 from .models import Post, Category
 from rest_framework.serializers import HyperlinkedModelSerializer, StringRelatedField
-from django.contrib.auth.models import User
 
 
 class PostSerializer(HyperlinkedModelSerializer):
@@ -15,3 +16,15 @@ class CategorySerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Category
         fields = ['name', 'description', 'posts']
+
+
+class UserSerializer(HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ['url', 'username', 'email', 'groups']
+
+
+class GroupSerializer(HyperlinkedModelSerializer):
+    class Meta:
+        model = Group
+        fields = ['url', 'name']

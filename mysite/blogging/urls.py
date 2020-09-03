@@ -1,10 +1,13 @@
 from django.urls import path, include
-from .views import list_view, detail_view, PostViewSet, CategoryViewSet
+from .views import list_view, detail_view, PostViewSet, CategoryViewSet, UserViewSet, GroupViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'posts', PostViewSet)
 router.register(r'categories', CategoryViewSet)
+router.register(r'groups', GroupViewSet)
+router.register(r'posts', PostViewSet)
+router.register(r'users', UserViewSet)
+
 
 
 urlpatterns = [
