@@ -30,7 +30,7 @@ class PostViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
-    queryset = Post.objects.all()
+    queryset = Post.objects.all().order_by('-created_date')
     serializer_class = PostSerializer
     permission_classes = [permissions.IsAuthenticated]
 

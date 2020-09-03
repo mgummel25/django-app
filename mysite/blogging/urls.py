@@ -10,6 +10,6 @@ router.register(r'categories', CategoryViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('', list_view, name="blog_index"),
+    path('blog/', list_view, name="blog_index"),
     path('posts/<int:post_id>/', detail_view, name="blog_detail")
 ]

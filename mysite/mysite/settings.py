@@ -130,7 +130,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/blog/'
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
